@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-const int MOD = 1000000007;
+const int MOD = 10'0000'0007;
 
 // 快速幂计算
 long long mod_pow(long long base, long long exp, long long mod) {

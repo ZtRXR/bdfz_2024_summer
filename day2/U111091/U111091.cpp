@@ -2,7 +2,7 @@
 using namespace std;
 #define int long long
 
-const int MAX_N = 5'0000+5;
+const int MAX_N = 10'0005;
 int times;
 
 int x[MAX_N];
@@ -106,8 +106,6 @@ signed main(){
         }
         cout<<"\n";
         */
-        
-
     }
 
 }
