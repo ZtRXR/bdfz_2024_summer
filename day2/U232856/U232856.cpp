@@ -11,7 +11,6 @@ signed main(){
     for(int i=1;i<=q1;i++){
         int r1,r2,c1,c2,x;
         cin>>r1>>r2>>c1>>c2;
-        
     }
     for (int i=1 ;i<=q2;i++) {
         int r1,r2,c1,c2;
