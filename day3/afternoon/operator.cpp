@@ -1,5 +1,15 @@
 #include <bits/stdc++.h>
-using std::cout,std::cin,std::vector,std::endl;
+#define uint unsigned int
+using std::cout,std::vector,std::endl;
+
+template<typename T>
+std::ostream& operator<<(std::ostream& os,vector<T> &v){
+    os<<"vector<?> [";
+    for(size_t i=0;i<v.size();i++){
+        os<<v[i]<<(i!=v.size()-1?",":"]\n");
+    }
+    return os;
+}
 
 std::ostream& operator<<(std::ostream& os,vector<int> &v){
     os<<"vector<int> [";
@@ -10,8 +20,13 @@ std::ostream& operator<<(std::ostream& os,vector<int> &v){
 }
 
 int main(){
-    vector<int> v;
-    v.push_back(1);
-    v.push_back(2);
+    vector<int> v(10);
+    for(uint i=0;i<v.size();i++){
+        v[i]=i;
+    }
     cout<<v<<endl;
+    vector<std::string> vs;
+    vs.push_back("123");
+    vs.push_back("1024");
+    cout<<vs<<endl;
 }
