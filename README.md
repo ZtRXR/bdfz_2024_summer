@@ -7,6 +7,35 @@
 ## Day3
 ### [U86432 捞鱼(fish)](./day3/U86432/U86432.md)
 1. 数据离散化是指把数据只保留有用的东西，在本题当中指的是把数据排序后保存顺序关系，让内存数组可以少一些
+2. 看到哪个东西的数据量最少，实在不行就从那个东西下手
+
+### [T490194 还原排列](./day3/T490194/T490194.md)
+1. 学会使用`bool next_permutation(begin,end)` 进行排列组合，没有下一个组合时会返回false，下面是一个示例
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+typedef unsigned int u32;
+ostream& operator<<(ostream &os,const vector<int> &v){
+    os<<"vector<int> [";
+    for(u32 i=0;i<v.size();i++){
+        os<<v[i]<<(i!=v.size()-1?",":"]");
+    }
+    return os;
+}
+int n;
+int main(){
+    cin>>n;
+    vector<int> v(n);
+    for(int &i:v){
+        cin>>i;
+    }
+    cout<<"v:"<<v<<endl;
+    while(next_permutation(v.begin(),v.end())){
+        cout<<"v_pered"<<v<<endl;
+    }
+    
+}
+```
 
 # 排序
 ## 稳定性
