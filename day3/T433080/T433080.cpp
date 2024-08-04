@@ -2,8 +2,7 @@
 using namespace std;
 
 #define PRINT_VEC(v){cout<<#v<<" [";for(size_t i=0;i<v.size();i++)cout<<v[i]<<(i!=v.size()-1?",":"]\n");}
-#define GET_ARRAY_LEN(a)sizeof(a)/sizeof(a[0])
-
+#define GET_ARRAY_LEN(a)(sizeof(a)/sizeof(a[0]))
 
 int main() {
     {
