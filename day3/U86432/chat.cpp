@@ -38,7 +38,6 @@ int main() {
         }
     }
     
-    // Output results
     for (int i = 0; i <= k; ++i) {
         cout << result[i] << endl;
     }
