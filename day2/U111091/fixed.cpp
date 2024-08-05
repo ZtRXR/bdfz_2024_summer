@@ -12,8 +12,7 @@ typedef unsigned int u32;
 #endif
 
 const i32 MAX_N=5'0000;
-i32 t,n,k,m;
-u32 x[MAX_N],perfix[MAX_N+5];
+u32 x[MAX_N],perfix[MAX_N+5],n,m,t,k;
 
 template<typename T>
 void set_mem(T *begin,u32 size,T value){
@@ -24,21 +23,21 @@ void set_mem(T *begin,u32 size,T value){
 
 u32 one_section(){
     u32 max_num=0;
-    for(u32 i=1;i<=n;i++){
+    for(u32 i=1u;i<=n;i++){
         u32 j=1;
-        while(x[i+j]-x[i]>m){
+        while(i+j<=n&&x[i+j]-x[i]>m){
             j++;
         }
         j--;
         max_num = max(max_num,perfix[i+j]-perfix[i]);
     }
+    PRINT_VALUE(max_num);
     return max_num;
 }
 
 int main(){
     cin>>t;
     PRINT_VALUE(t);
-    return 0;
     for(u32 i=1;i<=t;i++){
         cin>>n>>k>>m;
         set_mem(perfix, n+1, 0u);
@@ -53,5 +52,6 @@ int main(){
             }
         }
         u32 num = max(one_section(),(u32)0);
+        cout<<num<<endl;
     }
 }
