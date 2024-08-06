@@ -31,7 +31,6 @@
 
 # Executables
 *.exe
-*.out
 *.app
 
 tempCodeRunnerFile
@@ -43,3 +42,5 @@ day3/T433080/redo
 day3/T433080/out.txt
 day2/U111091/out.txt
 day2/U111091/fixed
+day4/T435167/T435167
+day4/U461920/U461920
