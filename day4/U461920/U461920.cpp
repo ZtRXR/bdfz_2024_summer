@@ -6,9 +6,11 @@ using namespace std;
 
 #ifdef DEBUG
 #define PRINT_VALUE(v){cout<<#v<<" :"<<v<<endl;}
+#define PRINT_ARRAY(arr,size){cout<<#arr<<" [";for(int i=1;i<=size;i++)cout<<arr[i]<<(i!=size?",":"]\n");}
 #endif
 #ifndef DEBUG
 #define PRINT_VALUE(v)
+#define PRINT_ARRAY(arr,size)
 #endif
 
 const int MAX_N=5*1e5+5;
@@ -25,12 +27,15 @@ void set_num_times_mem(){
 int main(){
     cin>>n;
     set_num_times_mem();
+    PRINT_ARRAY(num_times,n);
     for(int i=1;i<=n;i++){
         cin>>arr[i];
         num_times[arr[i]]++;
         PRINT_VALUE(i);
-        PRINT_VALUE(arr[i])
+        PRINT_VALUE(arr[i]);
         PRINT_VALUE(num_times[arr[i]]);
+        PRINT_ARRAY(arr, n);
+        PRINT_ARRAY(num_times,n);
         if (i==1) {
             ans=max(num_times[arr[i]],ans);
         }else{
