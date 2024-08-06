@@ -25,6 +25,8 @@ void set_num_times_mem(){
 }
 
 int main(){
+    cin.sync_with_stdio(false);
+    cin.tie(0);
     cin>>n;
     set_num_times_mem();
     PRINT_ARRAY(num_times,n);
