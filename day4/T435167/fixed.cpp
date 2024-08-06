@@ -1,4 +1,3 @@
-//TODO
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -27,24 +26,41 @@ bool is_all_same(int a[],int size){
 void sort_fix(int arr[],int b[],int size){
     vector<pair<int,int>> hist;
     for (int i=1; i<=size; i++) {
-        int p_max=-1;
-        int max_num=arr[i];
+        int p_min=-1;
+        int min_num=arr[i];
         for (int j=i; j<=size; j++) {
-            if (max_num<arr[j]){
-                p_max=j;
-                max_num=arr[j];
+            if (min_num>arr[j]){
+                p_min=j;
+                min_num=arr[j];
             }
         }
-        if (p_max==-1) {
+        if (p_min==-1) {
+            continue;
+        }else if(b[p_min]!=b[i]){
+            hist.push_back(make_pair(p_min, i));
+            swap(a[i],a[p_min]);
+            swap(b[p_min],b[i]);
+            continue;
+        }else{
+            int p_transfer;
+            for (int j=1; j<=size;j++) {
+                if (b[p_min]!=b[j]) {
+                    p_transfer=j;
+                    break;
+                }
+            }
+            hist.push_back(make_pair(i, p_transfer));
+            hist.push_back(make_pair(p_min, p_transfer));
+            hist.push_back(make_pair(p_transfer, i));
+            swap(a[i],a[p_min]);
+            swap(b[i],b[p_min]);
             continue;
         }
-        if(arr[p_max]!=arr[i]){
-            hist.push_back(make_pair(p_max, i));
-            swap(a[i],a[p_max]);
-            swap(b[p_max],b[i]);
-        }
     }
-    //TODO
+    cout<<hist.size()<<endl;
+    for(auto [left,right]:hist){
+        cout<<right<<" "<<left<<endl;
+    }
 }
 
 int main(){
@@ -64,7 +80,7 @@ int main(){
             cout<<0<<endl;
             continue;
         }
-        if (is_all_same(a, n)) {
+        if (is_all_same(b, n)) {
             cout<<-1<<endl;
             continue;
         }
