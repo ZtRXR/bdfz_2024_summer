@@ -69,6 +69,7 @@ ll ksm(ll a,ll b,ll M){
 #### [公平的竞争（fair）](./day5/statement.pdf)
 ##### $x=2+ {{x}\over{4}}$  => $x = {{8} \over 3}$是怎么得出来的
 
+
 # 排序
 ## 稳定性
 >隔着老远swap一般不稳定
