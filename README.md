@@ -1,4 +1,4 @@
-# bdfu_2024_summer
+# bdfz_2024_summer
 # 题目经验总结
 ## Day2
 ### [U111091 区间2段覆盖](./day2/U111091/U111091.md)
@@ -65,6 +65,9 @@ ll ksm(ll a,ll b,ll M){
     return a * _ksm(b, M - 2,M) % M;
 }
 ```
+### 比赛疑问
+#### [公平的竞争（fair）](./day5/statement.pdf)
+##### $x=2+ {{x}\over{4}}$  => $x = {{8} \over 3}$是怎么得出来的
 
 # 排序
 ## 稳定性
