@@ -44,7 +44,27 @@ int main(){
 
 ## Day5
 ### 需要学习的点
->区间最值
+#### 区间最值
+#### 弄懂分数取模出现很大的数字是什么鬼、
+1. >费马小定理
+2. >逆元
+```cpp
+// a/b%M
+ll _ksm(ll a, ll b,ll M){
+    ll res = 1;
+    while(b) {
+        if(b & 1)                    
+            res = res * a % M;       
+        a = a * a % M;               
+        b >>= 1;                     
+    }
+    return res;
+}
+
+ll ksm(ll a,ll b,ll M){
+    return a * _ksm(b, M - 2,M) % M;
+}
+```
 
 # 排序
 ## 稳定性
