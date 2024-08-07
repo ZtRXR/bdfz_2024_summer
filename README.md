@@ -71,6 +71,7 @@ ll ksm(ll a,ll b,ll M){
 
 # [RMQ 区间最值问题](./day5/RMQ_by_chat.md)
 >点击跳转
+[自己手动实践](./day5/RMQ/st.cpp)
 
 # 排序
 ## 稳定性
